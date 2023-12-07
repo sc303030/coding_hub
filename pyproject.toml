@@ -1,0 +1,10 @@
+[tool.pytest.ini_options]
+testpaths = [
+    "apps/tests",
+]
+DJANGO_SETTINGS_MODULE = "coding_hub.settings"
+addopts = "--reuse-db"
+filterwarnings = [
+    "ignore::UserWarning",
+    "ignore::DeprecationWarning",
+]

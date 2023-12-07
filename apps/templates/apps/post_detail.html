@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>코딩허브</title>
+    <div>
+        <h5>제목 : {{ post.title }}</h5>
+        <h5>내용</h5>
+        <textarea readonly>{{ post.text }}</textarea>
+    </div>
+    <div>
+        <h4>관련 포스트</h4>
+        {% for relation in  relation_list %}
+            <a href="{% url 'apps:post_detail' relation.pk %}"><h5>{{ relation.title }} 보러가기</h5></a>
+        {% endfor %}
+    </div>
+
+    <a href="{% url "apps:post" %}">목록으로</a>
+</head>
+<body>
+
+</body>
+</html>
