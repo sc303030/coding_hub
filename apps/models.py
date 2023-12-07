@@ -19,8 +19,6 @@ class Post(TimestampedModel):
         "self",
         verbose_name="연관게시글",
         blank=True,
-        related_name="relation_post",
-        symmetrical=False,
     )
     tag_set = models.ManyToManyField("Tag", blank=True)
 
